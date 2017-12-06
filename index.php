@@ -1,5 +1,3 @@
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet"> 
-<link rel="stylesheet" type="text/css" href="style.css">
 <?php
 
 date_default_timezone_set("America/New_York");
@@ -51,20 +49,3 @@ $smarty->assign('raidStats', $raidStats);
 $smarty->display($pageID.'.html');
 
 ?>
-
-
-
-<!--<h2>Destiny 2 Raid Stats</h2>
-
-<div class="charSelect">
-<?php
-foreach($charInfo as $i){
-	echo "<div class='charContainer'>";
-	echo "<img class='emblemBG' src='https://www.bungie.net/".$i['Response']['character']['data']['emblemBackgroundPath']."'/>";
-	echo "<img class='emblemIco' src='https://www.bungie.net/".$i['Response']['character']['data']['emblemPath']."'/>";
-	echo "</div>";
-}
-?>-->
-
-
-</div>
