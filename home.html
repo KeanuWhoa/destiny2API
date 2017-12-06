@@ -1,2 +1,13 @@
-<p>hello</p>
-<p>{$raidStats.activitiesCleared.basic.value}</p>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet"> 
+<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+	<h2>Destiny 2 Raid Stats</h2>
+	<div class="charSelect">
+		{foreach from=$charInfo item=i}
+			<div class='charContainer'>
+				<img class='emblemBG' src='https://www.bungie.net/{$i.Response.character.data.emblemBackgroundPath}'/>
+				<img class='emblemIco' src='https://www.bungie.net/{$i.Response.character.data.emblemPath}'/>
+			</div>
+		{/foreach}
+	</div>
+</body>

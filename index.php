@@ -11,7 +11,7 @@ include('destinyINI.php');
 include('destinyStats.php');
 include('destinyCharacters.php');
 
-$pageID = trim($_SERVER['REQUEST_URI'], 'destiny/');
+$pageID = trim($_SERVER['REQUEST_URI'], 'destiny/destiny2API/');
 
 if($pageID == ""){
 	$pageID = "home";
@@ -45,9 +45,8 @@ $raidStats = $raidStats[0]['Response']['raid']['allTime'];
 print_r($raidStats);
 echo "</pre>";*/
 
-echo $pageID;
-
 $smarty->assign('pageID', $pageID);
+$smarty->assign('charInfo', $charInfo);
 $smarty->assign('raidStats', $raidStats);
 $smarty->display($pageID.'.html');
 
